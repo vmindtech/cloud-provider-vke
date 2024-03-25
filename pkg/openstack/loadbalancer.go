@@ -373,6 +373,9 @@ func (lbaas *LbaasV2) getLoadBalancerLegacyName(_ context.Context, _ string, ser
 // returned.
 // If preferredIPFamily is specified, only address of the specified IP family can be returned.
 func nodeAddressForLB(node *corev1.Node, preferredIPFamily corev1.IPFamily) (string, error) {
+	if strings.Contains(node.Name, "master") {
+		return "", cpoerrors.ErrNoAddressFound
+	}
 	addrs := node.Status.Addresses
 	if len(addrs) == 0 {
 		return "", cpoerrors.ErrNoAddressFound
