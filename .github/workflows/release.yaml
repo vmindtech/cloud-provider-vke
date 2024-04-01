@@ -22,5 +22,11 @@ jobs:
 
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.1.0
+        with:
+          charts_dir: charts/openstack-cloud-controller-manager
+          charts_url: https://github.com/vmindtech/cloud-provider-vke
+          owner: vmindtech
+          repository: cloud-provider-vke
+          branch: master
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
