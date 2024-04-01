@@ -18,7 +18,13 @@ jobs:
       - name: Configure Git
         run: |
           git config user.name "$GITHUB_ACTOR"
-          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+          git config user.email "info@vmind.com.tr"
+
+      - name: Helm Deps
+        run: |
+          for dir in $(ls -d charts/*); do
+            helm dependency update $dir;
+          done
 
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.1.0
