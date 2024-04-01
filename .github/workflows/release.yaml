@@ -37,4 +37,4 @@ jobs:
         with:
           charts_dir: charts
         env:
-          CR_TOKEN: ${{ secrets.ACTION_TOKEN}}
+          CR_TOKEN: ${{ secrets.ACTION_SECRET}}
