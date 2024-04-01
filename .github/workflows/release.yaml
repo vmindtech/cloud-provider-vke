@@ -24,3 +24,5 @@ jobs:
         uses: helm/chart-releaser-action@v1.1.0
         with:
           charts_dir: charts/openstack-cloud-controller-manager
+        env:
+          CR_TOKEN: ${{ secrets.ACTION_TOKEN}}
