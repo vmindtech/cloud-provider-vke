@@ -85,13 +85,7 @@ csi:
         #   type: RuntimeDefault
       affinity: {}
       nodeSelector: {}
-      tolerations:
-        - key: CriticalAddonsOnly
-          effect: NoExecute
-          value: "true"
-        - key: node.cloudprovider.kubernetes.io/uninitialized
-          effect: NoSchedule
-          value: "true"
+      tolerations: []
         
       kubeletDir: /var/lib/kubelet
       # Allow for specifying internal IP addresses for multiple hostnames
