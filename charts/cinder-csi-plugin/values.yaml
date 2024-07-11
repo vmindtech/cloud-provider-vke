@@ -172,7 +172,7 @@ storageClass:
     isDefault: false
     allowVolumeExpansion: true
   retain:
-    isDefault: false
+    isDefault: true
     allowVolumeExpansion: true
 # any kind of custom StorageClasses
 #   custom: |-
