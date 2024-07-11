@@ -121,7 +121,7 @@ csi:
         # readOnlyRootFilesystem: true
       affinity: {}
       nodeSelector: {}
-      tolerations: []
+      tolerations: [] 
       # Allow for specifying internal IP addresses for multiple hostnames
       # hostAliases:
       #   - ip: "10.0.0.1"
