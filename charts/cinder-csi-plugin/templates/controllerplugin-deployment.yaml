@@ -219,15 +219,9 @@ spec:
       volumes:
         - name: socket-dir
           emptyDir:
-        {{- if .Values.secret.enabled }}
         - name: cloud-config
           secret:
-            secretName: {{ .Values.secret.name }}
-        {{- else if .Values.secret.hostMount }}
-        - name: cloud-config
-          hostPath:
-            path: /etc/kubernetes
-        {{- end }}
+            secretName: cloud-config
         {{- with .Values.csi.plugin.volumes }}
           {{- toYaml . | nindent 8 }}
         {{- end }}
