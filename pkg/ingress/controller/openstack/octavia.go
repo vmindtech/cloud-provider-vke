@@ -485,6 +485,18 @@ func (os *OpenStack) EnsurePoolMembers(deleted bool, poolName string, lbID strin
 	// Batch update pool members
 	var members []pools.BatchUpdateMemberOpts
 	for _, node := range nodes {
+		// Skip control-plane nodes
+		isControlPlane := false
+		for _, taint := range node.Spec.Taints {
+			if taint.Key == "node-role.kubernetes.io/control-plane" || taint.Key == "node-role.kubernetes.io/master" {
+				isControlPlane = true
+				break
+			}
+		}
+		if isControlPlane {
+			continue
+		}
+
 		addr, err := getNodeAddressForLB(node)
 		if err != nil {
 			// Node failure, do not create member
