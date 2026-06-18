@@ -2,9 +2,8 @@ name: Release Charts
 
 on:
   push:
-    branches:
-      - "master"
-      - "release-*"
+    tags:
+      - "v*"
 
 jobs:
   release:
@@ -37,8 +36,4 @@ jobs:
         with:
           charts_dir: charts
         env:
-          CR_TOKEN: ${{ secrets.ACTION_SECRET}}
-<<<<<<< HEAD
-=======
-          
->>>>>>> 954bbbed (change CI)
+          CR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
