@@ -1,0 +1,49 @@
+apiVersion: v1
+entries:
+  openstack-cinder-csi:
+  - apiVersion: v1
+    appVersion: v1.36.0
+    created: "2026-06-18T08:41:23.298337697Z"
+    description: Cinder CSI Chart for OpenStack
+    digest: b0377143aa0fc2cbfe02a0f64e3bb38227d99e2c77d78a7d39721372474aa7b8
+    home: https://github.com/kubernetes/cloud-provider-openstack
+    icon: https://github.com/kubernetes/kubernetes/blob/master/logo/logo.png
+    maintainers:
+    - email: mnasiadka@gmail.com
+      name: mnasiadka
+    - email: matt@stackhpc.com
+      name: mkjpryor
+    name: openstack-cinder-csi
+    urls:
+    - https://github.com/vmindtech/cloud-provider-vke/releases/download/openstack-cinder-csi-2.36.0/openstack-cinder-csi-2.36.0.tgz
+    version: 2.36.0
+  openstack-manila-csi:
+  - apiVersion: v1
+    appVersion: v1.36.0
+    created: "2026-06-18T08:41:23.563190661Z"
+    description: Manila CSI Chart for OpenStack
+    digest: 69268a5a4f95fbe20bb378cef95b425f182053d68cb988e424a4b12f49b58176
+    home: http://github.com/kubernetes/cloud-provider-openstack
+    icon: https://github.com/kubernetes/kubernetes/blob/master/logo/logo.png
+    maintainers:
+    - email: mnasiadka@gmail.com
+      name: mnasiadka
+    - email: matt@stackhpc.com
+      name: mkjpryor
+    name: openstack-manila-csi
+    urls:
+    - https://github.com/vmindtech/cloud-provider-vke/releases/download/openstack-manila-csi-2.36.0/openstack-manila-csi-2.36.0.tgz
+    version: 2.36.0
+  vke-cloud-controller-manager:
+  - apiVersion: v1
+    appVersion: v1.36.0
+    created: "2026-06-18T08:41:23.820805395Z"
+    description: vke Cloud Controller Manager Helm Chart
+    digest: 15432952786b012bd04fa8b96c04727d6f90690cd5392da165477ff57e7ce107
+    home: https://github.com/kubernetes/cloud-provider-openstack
+    icon: https://object-storage-ca-ymq-1.vexxhost.net/swift/v1/6e4619c416ff4bd19e1c087f27a43eea/www-images-prod/openstack-logo/OpenStack-Logo-Vertical.png
+    name: vke-cloud-controller-manager
+    urls:
+    - https://github.com/vmindtech/cloud-provider-vke/releases/download/vke-cloud-controller-manager-2.36.0/vke-cloud-controller-manager-2.36.0.tgz
+    version: 2.36.0
+generated: "2026-06-18T08:41:23.820813942Z"
