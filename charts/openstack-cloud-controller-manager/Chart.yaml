@@ -4,4 +4,7 @@ icon: https://object-storage-ca-ymq-1.vexxhost.net/swift/v1/6e4619c416ff4bd19e1c
 home: https://github.com/kubernetes/cloud-provider-openstack
 name: vke-cloud-controller-manager
 version: 2.36.0
-
+dependencies:
+  - name: common
+    version: 2.14.1
+    repository: https://charts.bitnami.com/bitnami
