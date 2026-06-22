@@ -55,21 +55,6 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
-      - name: Make package public
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          PACKAGE="${{ matrix.image }}"
-          STATUS=$(gh api "orgs/${{ github.repository_owner }}/packages/container/${PACKAGE}" --jq '.visibility' 2>/dev/null || echo "unknown")
-          echo "Current visibility for ${PACKAGE}: ${STATUS}"
-          if [ "$STATUS" != "public" ]; then
-            gh api --method PATCH "orgs/${{ github.repository_owner }}/packages/container/${PACKAGE}" \
-              --field visibility=public
-            echo "Package ${PACKAGE} is now public"
-          else
-            echo "Package ${PACKAGE} is already public"
-          fi
-
   release:
     runs-on: ubuntu-latest
     steps:
