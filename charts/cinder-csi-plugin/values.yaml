@@ -81,13 +81,16 @@ csi:
       - name: cacert
         hostPath:
           path: /etc/cacert
+      - name: cloud-config
+        secret:
+          secretName: cloud-config
     volumeMounts:
       - name: cacert
         mountPath: /etc/cacert
         readOnly: true
       - name: cloud-config
-        secret:
-          secretName: cloud-config
+        mountPath: /etc/config
+        readOnly: true
     nodePlugin:
       dnsPolicy: ClusterFirstWithHostNet
       # Optional additional annotations to add to the nodePlugin Pods.
