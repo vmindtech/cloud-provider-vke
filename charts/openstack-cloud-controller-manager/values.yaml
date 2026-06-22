@@ -17,7 +17,7 @@ imagePullSecrets: []
 # Image repository name and tag
 image:
   repository: ghcr.io/vmindtech/openstack-cloud-controller-manager
-  tag: "v0.0.10"
+  tag: ""
 
 # Additional containers which are run before the app containers are started.
 extraInitContainers: []
