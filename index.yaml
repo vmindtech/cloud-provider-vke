@@ -34,6 +34,18 @@ entries:
     urls:
     - https://github.com/vmindtech/cloud-provider-vke/releases/download/openstack-manila-csi-2.36.0/openstack-manila-csi-2.36.0.tgz
     version: 2.36.0
+  vke-cinder-csi:
+  - apiVersion: v1
+    appVersion: v1.36.0
+    created: "2026-06-22T11:04:21.364839241Z"
+    description: Cinder CSI Chart for VKE
+    digest: 082ea5ef4c1ee36722d01c7b533fa4592f7cb5caa5d068b582af3df8f99f3eb3
+    home: https://github.com/kubernetes/cloud-provider-openstack
+    icon: https://github.com/kubernetes/kubernetes/blob/master/logo/logo.png
+    name: vke-cinder-csi
+    urls:
+    - https://github.com/vmindtech/cloud-provider-vke/releases/download/vke-cinder-csi-1.36.0/vke-cinder-csi-1.36.0.tgz
+    version: 1.36.0
   vke-cloud-controller-manager:
   - apiVersion: v1
     appVersion: v1.36.0
@@ -46,4 +58,15 @@ entries:
     urls:
     - https://github.com/vmindtech/cloud-provider-vke/releases/download/vke-cloud-controller-manager-2.36.0/vke-cloud-controller-manager-2.36.0.tgz
     version: 2.36.0
-generated: "2026-06-18T08:41:23.820813942Z"
+  - apiVersion: v1
+    appVersion: v1.36.0
+    created: "2026-06-22T11:04:21.59932353Z"
+    description: VKE Cloud Controller Manager Helm Chart
+    digest: 85e5385414d4061ed2c223ada4b321167e05e6f10db2a030e5179aaf49447e7e
+    home: https://github.com/kubernetes/cloud-provider-openstack
+    icon: https://object-storage-ca-ymq-1.vexxhost.net/swift/v1/6e4619c416ff4bd19e1c087f27a43eea/www-images-prod/openstack-logo/OpenStack-Logo-Vertical.png
+    name: vke-cloud-controller-manager
+    urls:
+    - https://github.com/vmindtech/cloud-provider-vke/releases/download/vke-cloud-controller-manager-1.36.0/vke-cloud-controller-manager-1.36.0.tgz
+    version: 1.36.0
+generated: "2026-06-22T11:04:21.599347846Z"
