@@ -8,7 +8,7 @@ csi:
   attacher:
     image:
       repository: registry.k8s.io/sig-storage/csi-attacher
-      tag: v4.10.0
+      tag: v4.12.0
       pullPolicy: IfNotPresent
     resources: {}
     extraArgs: {}
@@ -17,7 +17,7 @@ csi:
     topology: "true"
     image:
       repository: registry.k8s.io/sig-storage/csi-provisioner
-      tag: v5.3.0
+      tag: v6.3.0
       pullPolicy: IfNotPresent
     resources: {}
     extraArgs: {}
@@ -25,7 +25,7 @@ csi:
   snapshotter:
     image:
       repository: registry.k8s.io/sig-storage/csi-snapshotter
-      tag: v8.4.0
+      tag: v8.6.0
       pullPolicy: IfNotPresent
     resources: {}
     extraArgs: {}
@@ -41,7 +41,7 @@ csi:
   resizer:
     image:
       repository: registry.k8s.io/sig-storage/csi-resizer
-      tag: v1.14.0
+      tag: v2.2.0
       pullPolicy: IfNotPresent
     resources: {}
     extraArgs: {}
@@ -55,7 +55,7 @@ csi:
   livenessprobe:
     image:
       repository: registry.k8s.io/sig-storage/livenessprobe
-      tag: v2.17.0
+      tag: v2.19.0
       pullPolicy: IfNotPresent
     failureThreshold: 5
     initialDelaySeconds: 10
@@ -67,7 +67,7 @@ csi:
   nodeDriverRegistrar:
     image:
       repository: registry.k8s.io/sig-storage/csi-node-driver-registrar
-      tag: v2.15.0
+      tag: v2.17.0
       pullPolicy: IfNotPresent
     resources: {}
     extraArgs: {}
@@ -84,9 +84,6 @@ csi:
     volumeMounts:
       - name: cacert
         mountPath: /etc/cacert
-        readOnly: true
-      - name: cloud-config
-        mountPath: /etc/config
         readOnly: true
     nodePlugin:
       dnsPolicy: ClusterFirstWithHostNet
@@ -178,7 +175,7 @@ logVerbosityLevel: 2
 # 3) from host system path /etc/cloud/cloud.conf: set "enabled" to false and "hostMount" to true
 # 4) via agent-injector (e.g. hashicorp vault): set "enabled" and "hostMount" to false, you have to provide credentials on your own by injecting credentials into the pod
 secret:
-  enabled: false
+  enabled: true
   hostMount: false
   create: false
   filename: cloud.conf
